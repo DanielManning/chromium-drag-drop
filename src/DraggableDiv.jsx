@@ -25,7 +25,6 @@ const DraggableDiv = ({
         top,
         left,
         position: 'absolute',
-        // zIndex: 1,
         border: '1px solid black',
         height: '100px',
         width: '100px',
