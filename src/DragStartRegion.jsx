@@ -9,8 +9,8 @@ const DragStartRegion = () => {
   const handleMouseMove = (e) => {
     if (e.buttons === 1 && !showDraggableDiv) {
       setShowDraggableDiv(true);
-      setLeft(e.clientX - 25);
-      setTop(e.clientY - 25);
+      setLeft(e.clientX - 50);
+      setTop(e.clientY - 50);
     }
   };
 
@@ -22,13 +22,6 @@ const DragStartRegion = () => {
 
   return (
     <>
-      {showDraggableDiv ? (
-        <DraggableDiv
-          top={top}
-          left={left}
-          setShowDraggableDiv={setShowDraggableDiv}
-        />
-      ) : null}
       <div
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
@@ -47,6 +40,13 @@ const DragStartRegion = () => {
 
         Quisque vel urna in tortor consectetur lacinia. Mauris lacinia magna ac libero auctor ultricies. Maecenas placerat, risus sed dapibus aliquet, libero mauris volutpat velit, nec malesuada tellus ipsum ut ex. Duis sem ligula, vulputate eget pellentesque eu, convallis cursus orci. Nam blandit ante et mauris vehicula, in commodo lectus porttitor. Donec eu lacus et ligula pulvinar porta eu vel nisi. Nullam in lacus lacus. Quisque eu turpis ac ligula gravida dignissim. Vestibulum semper finibus dapibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ultrices vulputate risus, eu aliquet neque lacinia non. 
       </div>
+      {showDraggableDiv ? (
+        <DraggableDiv
+          top={top}
+          left={left}
+          setShowDraggableDiv={setShowDraggableDiv}
+        />
+      ) : null}
     </>
   );
 }

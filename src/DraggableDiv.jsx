@@ -25,9 +25,10 @@ const DraggableDiv = ({
         top,
         left,
         position: 'absolute',
+        // zIndex: 1,
         border: '1px solid black',
-        height: '50px',
-        width: '50px',
+        height: '100px',
+        width: '100px',
         userSelect: 'none',
       }}
       onDragStart={handleDragStart}
